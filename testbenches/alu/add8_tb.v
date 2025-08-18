@@ -11,7 +11,7 @@ module add8_tb;
     wire [7:0] sum;
     wire       c_out;
 
-    // Instantiate the 8-bit adder
+    // Instantiate  8-bit adder
     add8 uut (
         .A(A),
         .B(B),
@@ -21,7 +21,7 @@ module add8_tb;
     );
 
     initial begin
-        $dumpfile("wave.vcd");    // For GTKWave
+        $dumpfile("wave.vcd");
         $dumpvars(0, add8_tb);
 
         // Test 1: 0 + 0
@@ -39,7 +39,7 @@ module add8_tb;
         #10;
         $display("A=%h B=%h Cin=%b -> Sum=%h Cout=%b", A, B, c_in, sum, c_out);
 
-        // Test 4: 0xFF + 0x01 (check carry out)
+        // Test 4: 0xFF + 0x01
         A = 8'hFF; B = 8'h01; c_in = 0;
         #10;
         $display("A=%h B=%h Cin=%b -> Sum=%h Cout=%b", A, B, c_in, sum, c_out);

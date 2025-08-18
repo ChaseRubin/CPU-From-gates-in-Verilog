@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-// IR: loads instr_in when load=1 on clk edge; holds when load=0
+//loads instr_in when load=1 on clk edge; holds when load=0
 module ir (
     input  wire        clk,
     input  wire        reset,         // synchronous reset to 0

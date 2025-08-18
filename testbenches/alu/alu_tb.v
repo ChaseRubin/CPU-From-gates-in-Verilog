@@ -21,7 +21,7 @@ module alu_tb;
         $dumpfile("wave.vcd");
         $dumpvars(0, alu_tb);
 
-        // Test vectors
+        
         a = 8'h0F;  // 00001111
         b = 8'h03;  // 00000011
 
@@ -30,11 +30,11 @@ module alu_tb;
 
         for (i = 0; i < 8; i = i + 1) begin
             op = i[2:0];
-            #10; // wait for combinational logic to settle
+            #10; 
             $display("%4t | %b %b %03b | %b", $time, a, b, op, result);
         end
 
-        // Second test case
+       
         a = 8'hAA;  // 10101010
         b = 8'h55;  // 01010101
 

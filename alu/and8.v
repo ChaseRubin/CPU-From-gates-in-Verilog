@@ -1,3 +1,5 @@
+//bitwise and
+
 module and8 (
   input [7:0] a,
   input [7:0] b,

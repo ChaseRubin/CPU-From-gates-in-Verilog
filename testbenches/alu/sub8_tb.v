@@ -8,7 +8,7 @@ module sub8_tb;
     wire       c_out;
     wire signed [8:0] signed_result;
 
-    // Signed version for monitoring actual subtraction (for console output)
+    // Signed version for monitoring actual subtraction
     assign signed_result = {1'b0, A} - {1'b0, B};  // 9-bit to prevent overflow
 
     // Instantiate the DUT

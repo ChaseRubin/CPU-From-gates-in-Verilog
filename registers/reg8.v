@@ -3,8 +3,8 @@
 module reg8 (
     input  wire [7:0] D,     // 8-bit data input
     input  wire clk,         // clock input
-    input  wire set,         // synchronous set (all bits)
-    input  wire reset,       // synchronous reset (all bits)
+    input  wire set,         // synchronous set
+    input  wire reset,       // synchronous reset
     output wire [7:0] Q      // 8-bit data output
 );
     genvar i;

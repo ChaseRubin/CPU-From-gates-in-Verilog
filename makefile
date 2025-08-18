@@ -1,6 +1,6 @@
 # === CONFIG ===
-TOP_MODULE = ir_tb
-OUTPUT = ir.out
+TOP_MODULE = cpu_tb
+OUTPUT = cpu.out
 VCD = wave.vcd
 FILELIST = files.f
 

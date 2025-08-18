@@ -1,13 +1,13 @@
 `timescale 1ns/1ps
 
-module mux2 (
+module mux2 ( // a mux two selects the output of A or B depended on status of selction bit
     input wire A,
     input wire B,
     input wire S,
     output wire Y
 );
 
-    wire not_S;
+    wire not_S; 
     wire A_and_notS;
     wire B_and_S;
 

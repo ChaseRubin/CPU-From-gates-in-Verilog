@@ -7,10 +7,10 @@ module dff_sync_set_reset_tb;
     reg reset;
     wire Q;
 
-    // Internal probe wires (slave_in tapped from DUT)
+    // Internal probe wires
     wire slave_in_probe;
 
-    // Instantiate DUT
+    // Instantiate
     dff_sync_set_reset uut (
         .D(D),
         .clk(clk),
@@ -19,7 +19,6 @@ module dff_sync_set_reset_tb;
         .Q(Q)
     );
 
-    // Tap internal slave_in for debugging in GTKWave
     assign slave_in_probe = uut.slave_in;
 
     // Clock generation: 10ns period

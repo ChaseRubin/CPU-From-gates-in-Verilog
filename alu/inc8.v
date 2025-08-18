@@ -8,10 +8,10 @@ module inc8 (
 
     wire [7:0] zero = 8'b00000000;
 
-    add8 adder (
+    add8 adder ( //previous input is put into A, B is always zero, carry in is always high to increment
         .A(A),
         .B(zero),
-        .c_in(1'b1),     // Add 1 to A
+        .c_in(1'b1),     
         .sum(Y),
         .c_out(c_out)
     );

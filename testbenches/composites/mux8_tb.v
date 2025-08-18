@@ -7,7 +7,6 @@ module mux8_tb;
     wire y;
     reg  expected;
 
-    // DUT
     mux8 uut (
         .in0(in0),
         .in1(in1),
@@ -21,7 +20,6 @@ module mux8_tb;
         .y(y)
     );
 
-    // Expected value logic
     always @(*) begin
         case (sel)
             3'b000: expected = in0;
@@ -41,7 +39,6 @@ module mux8_tb;
         $dumpfile("wave.vcd");
         $dumpvars(0, mux8_tb);
 
-        // Set a known pattern for inputs
         in0 = 1'b0;
         in1 = 1'b1;
         in2 = 1'b0;

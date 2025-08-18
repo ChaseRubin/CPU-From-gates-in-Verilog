@@ -1,17 +1,16 @@
-module tb_or_gate;
+module tb_xor_gate;
 
     reg A, B;
     wire Y;
 
-    // Instantiate the AND gate
-    or_gate uut (
+    // Instantiate
+    xor_gate uut (
         .A(A),
         .B(B),
         .Y(Y)
     );
 
     initial begin
-        
         $monitor("Time=%0t A=%b -> Y=%b", $time, A, Y);
 
         A = 0;

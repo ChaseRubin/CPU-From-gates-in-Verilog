@@ -5,7 +5,7 @@ module zero8_tb;
     reg  [7:0] a;
     wire [7:0] y;
 
-    // Instantiate the zero8 module
+    // Instantiate
     zero8 uut (
         .a(a),
         .y(y)
@@ -17,7 +17,7 @@ module zero8_tb;
 
         $monitor("Time=%0t | a=%b | y=%b", $time, a, y);
 
-        // Apply different test values
+       
         a = 8'b00000000; #10;
         a = 8'b11111111; #10;
         a = 8'b10101010; #10;

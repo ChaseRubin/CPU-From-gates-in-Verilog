@@ -1,5 +1,9 @@
 `timescale 1ns/1ps
 
+//8 bit adder
+//each carry out goes to the next carry in
+//will output carry out if final bits are both high
+
 module add8 (
     input  wire [7:0] A,
     input  wire [7:0] B,

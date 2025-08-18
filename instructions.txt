@@ -1,0 +1,73 @@
+LDI (load immediate 4 bit): 4'h1
+T0: 
+    rom_read is high
+    instruction is put on rom dout
+    ir loads 
+    pc increments
+
+T1:
+    dirves 4 bit immediate
+    accumulator loads immediate
+    choses register takes the value
+T2: 
+    Idle 
+T3: 
+    Idle
+
+
+ADD (addition): 4'h2
+T0:
+    rom_read is high
+    instruction is put on rom dout
+    ir loads 
+    pc increments
+T1:
+    instruction flagged as binary
+    enables selected register to drive the bus
+    value from Rn appears on bus
+    b_load goes high
+T2:
+    alu enabled
+    alu operation read
+    output enabled
+    result on bus
+    destination: accumulator
+
+SUB (subtraction): 4'h3
+T0:
+    rom reads
+    ir loads
+    program is enabled
+    is binary flag goes high
+    alu op is set to subtraction
+T1:
+    b_load high --> bus loaded --> b_q gets set to alu b input
+    bin_t1_driveRn goes high --> anded with hot reg --> r_out_en (output enabled for selected reg) 
+T2:
+    sub_t2_writeA is enabled --> t2_writeA_any enabled --> acc_load_en accumulator load is enabled to load from bus
+    alu output is enabled and stored in reg A
+
+AND (logical and): 4'h4
+T0:
+    rom reads
+    ir loads
+    program is enabled
+    is binary flag goes high
+    alu op is set to and 
+T1:
+    b_load goes high --> selects bus --> put into b reg --> sets b_q high --> sends to alu b input
+    bin_t1_driveRn flag high, drives bus --> r_out_enable --> data from selected gpr is driven
+    B = Rn
+T2: 
+    and_t2_writeA is enabled --> t2_writeA_any is enabled --> acc_load_en selects load from bus -->
+    alu output is enabled and accumulator stores it in reg a
+
+
+
+
+
+
+
+
+
+

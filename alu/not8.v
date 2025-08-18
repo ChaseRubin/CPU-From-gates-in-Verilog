@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module not8 (
+module not8 ( //bitwise not, takes one input
     input  wire [7:0] A,
     output wire [7:0] Y
 );

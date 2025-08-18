@@ -3,7 +3,7 @@ module tb_not_gate;
     reg A;
     wire Y;
 
-    // Instantiate the NOT gate
+    // Instantiate
     not_gate uut (
         .A(A),
         .Y(Y)

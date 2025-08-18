@@ -3,7 +3,7 @@ module and_tb;
     reg A, B;
     wire Y;
 
-    // Instantiate the AND gate
+    // Instantiate
     and_gate uut (
         .A(A),
         .B(B),

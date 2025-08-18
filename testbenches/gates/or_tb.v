@@ -1,10 +1,10 @@
-module tb_nand_gate;
+module tb_or_gate;
 
     reg A, B;
     wire Y;
 
-    // Instantiate the AND gate
-    nand_gate uut (
+    // Instantiate
+    or_gate uut (
         .A(A),
         .B(B),
         .Y(Y)
