@@ -1,3 +1,6 @@
-This is my first project in verilog.
-
-This projected uses primitive logic gates to make hardware abstraction layers and eventually an 8 bit cpu
+-This project is an 8 bit CPU that uses mostly primitive logic gates
+-To program write code directly into the rom file
+-opcode should be found in the main cpu file
+-can hold 16 instrctions
+-7 general purpose registers
+-RAM (not yet used)
